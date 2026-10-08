@@ -209,6 +209,9 @@ class DashboardScreen extends StatelessWidget {
         ),
       ),
 
+
+
+
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color(0xFF3B82F6),
         onPressed: () {
@@ -217,31 +220,48 @@ class DashboardScreen extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
 
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color(0xFF07162E),
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
-        type: BottomNavigationBarType.fixed,
-        currentIndex: 0,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.flag),
-            label: 'Goals',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.smart_toy),
-            label: 'AI',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
+
+
+      bottomNavigationBar: Container(
+  decoration: BoxDecoration(
+    color: const Color(0xFF07162E),
+    borderRadius: const BorderRadius.vertical(
+      top: Radius.circular(25),
+    ),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black.withOpacity(0.3),
+        blurRadius: 20,
       ),
+    ],
+  ),
+  child: BottomNavigationBar(
+    elevation: 0,
+    backgroundColor: Colors.transparent,
+    type: BottomNavigationBarType.fixed,
+    selectedItemColor: const Color(0xFF3B82F6),
+    unselectedItemColor: Colors.grey,
+    items: const [
+      BottomNavigationBarItem(
+        icon: Icon(Icons.home_rounded),
+        label: 'Home',
+      ),
+      BottomNavigationBarItem(
+        icon: Icon(Icons.flag_rounded),
+        label: 'Goals',
+      ),
+      BottomNavigationBarItem(
+        icon: Icon(Icons.smart_toy_rounded),
+        label: 'AI',
+      ),
+      BottomNavigationBarItem(
+        icon: Icon(Icons.person_rounded),
+        label: 'Profile',
+      ),
+    ],
+  ),
+)
+
     );
   }
 }
